@@ -4,7 +4,7 @@
 
 `Step 2:` SSH into the VM
 
-`Step 3:` Upgrade its package
+`Step 3:` Upgrade its package and install web server
 
 > Debian based: Ubuntu, Debian, ...
 
@@ -44,4 +44,4 @@ sudo systemctl restart httpd
 sudo systemctl restart apache2
 ```
 
-NOTE: Verify that the firewall rule is configured correctly to ensure you can connect to the server.
+**NOTE:** Verify that the firewall rule is configured correctly to ensure you can connect to the server.
