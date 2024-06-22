@@ -1,33 +1,47 @@
-## Configure web server on AWS ec2-instance
+## Configure web server on virtual instances
 
-`Step 1:` Launch an ec2-instance and SSH into it
+`Step 1:` Launch an virtual machine
+
+`Step 2:` SSH into the VM
+
+`Step 3:` Upgrade its package
+
+> Debian based: Ubuntu, Debian, ...
 
 ```sh
-ssh -i codeops.pem ec2-user@ip-addr
+sudo apt-get update -y
+sudo apt-get install apache2 -y
+sudo systemctl start apache2
+sudo systemctl enable apache2
 ```
 
-`Step 2:` Install httpd/apache2 and git
+> CentOS or Fedora based: RedHat, Amazon Linux, ...
 
 ```sh
-sudo yum update && yum upgrade
-sudo yum install -y httpd git
-```
+sudo yum update -y
+sudo yum install httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
 
-`Step 3:` Clone web-server repository
-
-```sh
-git clone https://github.com/i-adarsh/aws-httpd-webserver.git
-```
-
-`Step 4:` Move the web-server files to the hosting directory
-
-```sh
-cd aws-httpd-webserver/
-sudo mv ./* /var/www/html/
-```
-
-`Step 5:` Start the web-server
-
-```sh
+# or
+# the below command start and enable the service
 sudo systemctl enable httpd --now
 ```
+
+`Step 4:` Pull / copy your files in the `/var/www/html` directory
+
+```sh
+git pull https://github.com/i-adarsh/cloud.git
+cd cloud/server/httpd-apache/
+sudo cp -r * /var/www/html/
+```
+
+`Step 5:` Restart your service
+
+```sh
+sudo systemctl restart httpd
+# or
+sudo systemctl restart apache2
+```
+
+NOTE: Verify that the firewall rule is configured correctly to ensure you can connect to the server.
