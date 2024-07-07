@@ -1,4 +1,4 @@
-## Configure web server on virtual instances
+## Configure HAProxy Load balancer on virtual instances
 
 `Step 1:` Launch an virtual machine
 
@@ -32,16 +32,33 @@ sudo systemctl enable httpd --now
 
 ```sh
 git pull https://github.com/i-adarsh/cloud.git
-cd cloud/server/httpd-apache/
-sudo cp -r * /var/www/html/
+cd cloud/server/haproxy-lb/
+sudo cp index.html /var/www/html/
 ```
 
-`Step 5:` Restart your service
+`Step 5:` Install HAProxy
+
+> Debian based: Ubuntu, Debian, ...
 
 ```sh
-sudo systemctl restart httpd
-# or
-sudo systemctl restart apache2
+sudo apt install haproxy -y
 ```
 
-**NOTE:** Verify that the firewall rule is configured correctly to ensure you can connect to the server.
+> CentOS or Fedora based: RedHat, Amazon Linux, ...
+
+```sh
+sudo yum install haproxy -y
+```
+
+`Step 6:` Replace the HAProxy configuration file
+
+```sh
+sudo mv /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy_backup.cfg
+sudo vim /etc/haproxy/haproxy.cfg # Replace the IPs address
+```
+
+`Step 7:` Restart HAProxy
+
+```sh
+sudo systemctl restart haproxy
+```
