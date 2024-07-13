@@ -55,6 +55,8 @@ find /var/www -type f -exec chmod 0664 {} \;
 
 ```
 
+---
+
 > CentOS or Fedora based: RedHat, Amazon Linux, ...
 
 ```sh
