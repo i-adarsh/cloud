@@ -31,7 +31,7 @@ sudo systemctl enable httpd --now
 `Step 4:` Pull or copy your files in the `/var/www/html` directory
 
 ```sh
-git pull https://github.com/i-adarsh/cloud.git
+git clone https://github.com/i-adarsh/cloud.git
 cd cloud/server/httpd-apache/
 sudo cp -r * /var/www/html/
 ```
