@@ -16,7 +16,7 @@ apt -y install apache2
 git clone https://github.com/i-adarsh/cloud.git
 
 # Copy the contents of a specific directory from the cloned repository to the web server's root directory
-cp -r cloud/server/gcp-lb/* /var/www/html/
+cp -r cloud/server/startup-script/* /var/www/html/
 
 # Get the server's external IP address Amazon AWS
 external_ip_address=$(curl -s https://checkip.amazonaws.com)
@@ -73,7 +73,7 @@ yum install -y httpd git
 git clone https://github.com/i-adarsh/cloud.git
 
 # Copy the contents of a specific directory from the cloned repository to the web server's root directory
-cp -r cloud/server/gcp-lb/* /var/www/html/
+cp -r cloud/server/startup-script/* /var/www/html/
 
 # Get the server's external IP address from Amazon AWS's Check IP service
 external_ip_address=$(curl -s https://checkip.amazonaws.com)
