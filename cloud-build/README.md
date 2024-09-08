@@ -10,4 +10,4 @@ Cloud Build uses a shared pool of workers to execute the build.
 
 Cloud Build uses a dedicated private pool of workers to execute the build.
 
-Private worker pool build 9
+Private worker pool build 10
