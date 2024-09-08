@@ -1,0 +1,8 @@
+steps:
+  - name: ubuntu
+    args:
+      - /bin/bash
+      - '-c'
+      - |
+        echo "Hello, world!"
+        sleep 300  # Sleep for 5 minutes (300 seconds)
