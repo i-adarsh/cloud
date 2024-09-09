@@ -6,3 +6,5 @@ steps:
       - |
         echo "Welcome to DevOps HQ!"
         sleep 30  # Sleep for 5 minutes (30 seconds)
+options:
+  logging: CLOUD_LOGGING_ONLY
