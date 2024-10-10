@@ -4,13 +4,13 @@ This guide provides step-by-step instructions for mounting a Filestore file shar
 
 `Step 1:` Install NFS on the Windows VM
 
-```sh filename="Powershell" copy
+```sh
 Install-WindowsFeature -Name NFS-Client
 ```
 
 `Step 2:` Configure the user ID used by the NFS client
 
-```sh filename="Powershell" copy
+```sh
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\ClientForNFS\CurrentVersion\Default" `
     -Name "AnonymousUid" -Value "0" -PropertyType DWORD
 
@@ -20,7 +20,7 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\ClientForNFS\CurrentVersion\Def
 
 `Step 3:` Restart the NFS client service
 
-```sh filename="Powershell" copy
+```sh
 nfsadmin client stop
 
 nfsadmin client start
@@ -28,7 +28,7 @@ nfsadmin client start
 
 `Step 4:` Connect file share to the Windows VM
 
-```sh filename="Powershell" copy
+```sh
 net use Z: \\10.254.33.194\filestore
 
 net use Z: \\10.254.33.194\filestore /persistent:yes
