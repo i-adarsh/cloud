@@ -1,12 +1,18 @@
-# To see extension logs in VS Code, you can follow these steps:
+# To see extension logs in VS Code, you can follow these steps
 
-Method 1 - Using "Output" tab in the terminal.
+## Method 1 - Using "Output" tab of terminal.
 
-Open terminal, using `Ctrl/Cmd + \`` or open it from Menu "Terminal" -> "New Terminal"
+![terminal](./method-1.png)
 
-Then, use the scrolling menu on the right side and select the plugin whose logs you want to see.
+Open the terminal by pressing <kbd>Ctrl</kbd>/<kbd>Cmd + `</kbd> or by going to "Terminal" -> "New Terminal" in the menu.
 
-Method 2 - Toggle Developer Tools
+In the terminal panel, select the `OUTPUT` tab.
+
+Use the dropdown menu on the right side of the panel to select the extension whose logs you want to view.
+
+## Method 2 - Toggle Developer Tools
+
+![developer-tools](./method-2.png)
 
 Open the Command Palette: Press Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS).
 
