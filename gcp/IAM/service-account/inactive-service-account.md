@@ -66,6 +66,8 @@ gcloud recommender insights list --insight-type=google.iam.serviceAccount.Insigh
     --format='value(DESCRIPTION)'
 ```
 
+![Output](./unused-service-account.png)
+
 Review the output:
 
 The command will output a list of all the service account insights for your project, including any unused service accounts.
