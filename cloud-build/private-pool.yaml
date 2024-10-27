@@ -8,4 +8,4 @@ steps:
         sleep 300  # Sleep for 5 minutes (300 seconds)
 options:
   pool:
-    name: projects/adarsh-web-1111/locations/asia-south1/workerPools/cloud-build-private
+    name: projects/devops-hq/locations/asia-south1/workerPools/cloud-build-private
