@@ -6,7 +6,8 @@ steps:
       - |
         echo "Hello, world!"
         sleep 30  # Sleep for 5 minutes (300 seconds)
+        echo "execution completed!"
 timeout: 10s
 options:
   pool:
-    name: projects/devops-hq/locations/asia-south1/workerPools/cloud-build-private
+    name: projects/adarsh-web-1111/locations/asia-south1/workerPools/cloud-build-private

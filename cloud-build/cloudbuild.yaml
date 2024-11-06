@@ -5,7 +5,7 @@ steps:
       - '-c'
       - |
         echo "Welcome to Google Cloud!"
-        sleep 25  # Sleep for 5 minutes (30 seconds)
+        sleep 25  # Sleep for defined seconds
         echo "execution completed!"
 timeout: 30s
 options:
