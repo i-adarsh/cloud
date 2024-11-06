@@ -5,7 +5,8 @@ steps:
       - '-c'
       - |
         echo "Hello, world!"
-        sleep 300  # Sleep for 5 minutes (300 seconds)
+        sleep 30  # Sleep for 5 minutes (300 seconds)
+timeout: 10s
 options:
   pool:
     name: projects/devops-hq/locations/asia-south1/workerPools/cloud-build-private
