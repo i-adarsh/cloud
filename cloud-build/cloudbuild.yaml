@@ -10,3 +10,6 @@ steps:
 timeout: 30s
 options:
   logging: CLOUD_LOGGING_ONLY
+platforms:
+  - linux/amd64
+  - linux/arm64

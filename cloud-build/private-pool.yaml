@@ -12,3 +12,6 @@ options:
   logging: CLOUD_LOGGING_ONLY
   pool:
     name: projects/adarsh-web-1111/locations/asia-south1/workerPools/cloud-build-private
+platforms:
+  - linux/amd64
+  - linux/arm64
