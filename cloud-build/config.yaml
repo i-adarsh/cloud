@@ -1,0 +1,5 @@
+registry: gcr.io/adarsh-web-1111/testing
+tag: 0.12
+platforms:
+  - linux/amd64
+  - linux/arm64
