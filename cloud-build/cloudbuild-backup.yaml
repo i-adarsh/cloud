@@ -1,0 +1,12 @@
+steps:
+  - name: ubuntu
+    args:
+      - /bin/bash
+      - '-c'
+      - |
+        echo "Welcome to Google Cloud!"
+        sleep 25  # Sleep for defined seconds
+        echo "execution completed!"
+timeout: 30s
+options:
+  logging: CLOUD_LOGGING_ONLY
