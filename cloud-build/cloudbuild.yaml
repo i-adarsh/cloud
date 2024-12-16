@@ -5,4 +5,4 @@ steps:
 serviceAccount: 'projects/adarsh-web-1111/serviceAccounts/adarsh-web-1111@appspot.gserviceaccount.com'
 timeout: '10800s'
 options:
-  logging: None
+  logging: NONE
