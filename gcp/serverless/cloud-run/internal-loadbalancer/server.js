@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 app.get('/', (req, res) => {
-    const name = process.env.NAME || 'Cloud Run User';
+    const name = process.env.NAME || 'to DevOps HQ';
 
     // Serving a styled HTML response
     const html = `

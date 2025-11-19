@@ -1,5 +1,8 @@
 {
     "name": "cloud-run-hello-world",
+    "author": {
+        "name": "adarshkr"
+    },
     "version": "1.0.0",
     "description": "A sample Hello World application for Cloud Run",
     "main": "server.js",
@@ -10,6 +13,6 @@
         "express": "^4.18.2"
     },
     "engines": {
-        "node": ">=18.0.0"
+        "node": ">=22.0.0"
     }
 }
