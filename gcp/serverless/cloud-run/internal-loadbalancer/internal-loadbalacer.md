@@ -20,8 +20,10 @@ gcloud artifacts repositories create $REPO_NAME \
 #### 4. Build and Submit the Image
 This command zips your local files, uploads them to Google Cloud Build, builds the Docker image, and stores it in the Artifact Registry you just created.
 ```bash
+gcloud auth configure-docker $REGION-docker.pkg.dev
 gcloud builds submit --tag $REGION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$SERVICE_NAME:v1
 ```
+
 #### 5. Deploy to Cloud Run
 Finally, deploy the image as a serverless service.
 ```bash
